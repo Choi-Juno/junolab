@@ -1,0 +1,13 @@
+{
+  "name": "junolab-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "new-app": "node scripts/new-app.mjs",
+    "test": "node --test",
+    "preview": "node scripts/preview.mjs"
+  },
+  "engines": { "node": "22.x" },
+  "dependencies": { "markdown-it": "15.0.2" }
+}

@@ -332,3 +332,35 @@ h3 {
     flex-direction: column;
   }
 }
+
+/* App-specific policy and support pages share a readable document layout. */
+.document-page { max-width: 800px; min-height: 65vh; }
+.document-page h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.25; overflow-wrap: anywhere; }
+.document-page h2 { margin-top: 36px; font-size: 24px; line-height: 1.4; }
+.document-page h3 { margin-top: 28px; font-size: 20px; line-height: 1.4; }
+.document-body { margin-top: 32px; font-size: 17px; line-height: 1.8; overflow-wrap: anywhere; }
+.document-body p, .document-body li { color: var(--ink); }
+.document-body a { color: var(--brand); text-underline-offset: 3px; }
+.document-body pre { overflow-x: auto; padding: 16px; background: var(--surface-alt); }
+.document-body table { display: block; overflow-x: auto; border-collapse: collapse; }
+.document-body th, .document-body td { padding: 10px; border: 1px solid var(--border); }
+.document-body img { max-width: 100%; height: auto; }
+.document-date, .breadcrumbs { color: var(--muted); font-size: 15px; line-height: 1.6; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+.document-links { display: flex; flex-wrap: wrap; gap: 10px; border-top: 1px solid var(--border); margin-top: 40px; padding-top: 24px; }
+.document-list { margin-top: 32px; border-top: 1px solid var(--border); }
+.document-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--border); text-decoration: none; overflow-wrap: anywhere; }
+.document-row strong { font-size: 22px; }
+.row-description { display: block; color: var(--muted); margin-top: 8px; }
+.app-row + .app-row { margin-top: 16px; }
+.app-row > div { min-width: 0; overflow-wrap: anywhere; }
+.app-actions { max-width: 400px; }
+a:focus-visible { outline: 3px solid var(--brand); outline-offset: 5px; }
+.skip-link { position: absolute; left: 12px; top: -100px; padding: 12px; background: white; z-index: 10; }
+.skip-link:focus { top: 8px; }
+@media (max-width: 760px) {
+  .site-header { gap: 20px; }
+  .nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  .document-page { padding-top: 32px; }
+  .document-links .button { flex: 1 1 auto; }
+}
